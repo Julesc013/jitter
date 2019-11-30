@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.btnStart = new System.Windows.Forms.Button();
             this.txtIP = new System.Windows.Forms.TextBox();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.colDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chartResponseTimes = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.numInterval = new System.Windows.Forms.NumericUpDown();
             this.numIterations = new System.Windows.Forms.NumericUpDown();
@@ -49,6 +46,9 @@
             this.lblAverage = new System.Windows.Forms.Label();
             this.lblMaximum = new System.Windows.Forms.Label();
             this.lblJitter = new System.Windows.Forms.Label();
+            this.colDomain = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartResponseTimes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numInterval)).BeginInit();
@@ -91,48 +91,27 @@
             this.dataGridView.Size = new System.Drawing.Size(605, 285);
             this.dataGridView.TabIndex = 3;
             // 
-            // colDomain
-            // 
-            this.colDomain.HeaderText = "Domain Name";
-            this.colDomain.Name = "colDomain";
-            this.colDomain.ReadOnly = true;
-            this.colDomain.Width = 250;
-            // 
-            // colIP
-            // 
-            this.colIP.HeaderText = "IP Address (IPv4)";
-            this.colIP.Name = "colIP";
-            this.colIP.ReadOnly = true;
-            this.colIP.Width = 180;
-            // 
-            // colTime
-            // 
-            this.colTime.HeaderText = "Response Time (ms)";
-            this.colTime.Name = "colTime";
-            this.colTime.ReadOnly = true;
-            this.colTime.Width = 130;
-            // 
             // chartResponseTimes
             // 
-            chartArea3.AxisX.LabelStyle.Enabled = false;
-            chartArea3.AxisX.MaximumAutoSize = 100F;
-            chartArea3.AxisX.Title = "Responses Recieved";
-            chartArea3.AxisY.MaximumAutoSize = 100F;
-            chartArea3.AxisY.Title = "Response Time (ms)";
-            chartArea3.Name = "ChartArea1";
-            this.chartResponseTimes.ChartAreas.Add(chartArea3);
-            legend3.Enabled = false;
-            legend3.Name = "Legend1";
-            this.chartResponseTimes.Legends.Add(legend3);
+            chartArea2.AxisX.LabelStyle.Enabled = false;
+            chartArea2.AxisX.MaximumAutoSize = 100F;
+            chartArea2.AxisX.Title = "Responses Recieved";
+            chartArea2.AxisY.MaximumAutoSize = 100F;
+            chartArea2.AxisY.Title = "Response Time (ms)";
+            chartArea2.Name = "ChartArea1";
+            this.chartResponseTimes.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chartResponseTimes.Legends.Add(legend2);
             this.chartResponseTimes.Location = new System.Drawing.Point(12, 403);
             this.chartResponseTimes.Name = "chartResponseTimes";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            series3.Legend = "Legend1";
-            series3.Name = "Response Times";
-            series3.YValuesPerPoint = 4;
-            this.chartResponseTimes.Series.Add(series3);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            series2.Legend = "Legend1";
+            series2.Name = "Response Times";
+            series2.YValuesPerPoint = 4;
+            this.chartResponseTimes.Series.Add(series2);
             this.chartResponseTimes.Size = new System.Drawing.Size(605, 187);
             this.chartResponseTimes.TabIndex = 4;
             this.chartResponseTimes.Text = "Response Times";
@@ -273,6 +252,27 @@
             this.lblJitter.Text = "Jitter: N/A";
             this.lblJitter.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // colDomain
+            // 
+            this.colDomain.HeaderText = "Domain Name";
+            this.colDomain.Name = "colDomain";
+            this.colDomain.ReadOnly = true;
+            this.colDomain.Width = 245;
+            // 
+            // colIP
+            // 
+            this.colIP.HeaderText = "IP Address (IPv4)";
+            this.colIP.Name = "colIP";
+            this.colIP.ReadOnly = true;
+            this.colIP.Width = 175;
+            // 
+            // colTime
+            // 
+            this.colTime.HeaderText = "Response Time (ms)";
+            this.colTime.Name = "colTime";
+            this.colTime.ReadOnly = true;
+            this.colTime.Width = 135;
+            // 
             // frmMain
             // 
             this.AcceptButton = this.btnStart;
@@ -312,9 +312,6 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.TextBox txtIP;
         private System.Windows.Forms.DataGridView dataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colDomain;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colIP;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartResponseTimes;
         private System.Windows.Forms.NumericUpDown numInterval;
         private System.Windows.Forms.NumericUpDown numIterations;
@@ -327,6 +324,9 @@
         private System.Windows.Forms.Label lblAverage;
         private System.Windows.Forms.Label lblMaximum;
         private System.Windows.Forms.Label lblJitter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDomain;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTime;
     }
 }
 
